@@ -90,7 +90,8 @@ Users must provide their own API keys to run the application.
 ### Step 1: Clone the repository
 
 ```
-https://github.com/Neelachamaraju/stale-answer-detector/
+https://github.com/Neelachamaraju/stale-answer-detector.git
+
 ```
 
 ### Step 2: Install dependencies
