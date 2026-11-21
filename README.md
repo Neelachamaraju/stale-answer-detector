@@ -202,7 +202,7 @@ stale-answer-detector/
 
 ## 🎥 Demo
 
-**Demo Video:** Coming soon
+**Demo Video:https://drive.google.com/file/d/1VH2YnbFUpH603-JQfJB_nxoqS5819mmb/view?usp=sharing
 
 ## 👥 Team
 
