@@ -1,49 +1,86 @@
-# 🔍 Stale Answer Detector
+## 🔍 Stale Answer Detector
 
-**Catch outdated facts in AI-generated answers.**
+Catch outdated facts in AI answers.
 
-AI tools can sound confident even when they provide outdated information. Stale Answer Detector helps identify potentially outdated facts by checking individual claims against live web sources.
+AI shouldn't just be smart. It should be current.
 
-It shows what's current, what's outdated, and what the correct information should be.
+Stale Answer Detector is an AI-powered application that identifies outdated or potentially inaccurate information in AI-generated answers by checking individual claims against live web evidence.
 
-**Team:** Duck Can Do Anything
+Instead of blindly trusting AI-generated responses, users can verify facts, explore sources, view corrected answers, and understand why an AI answer may have gone wrong.
 
-## 🚀 Features
+Team: Duck Can Do Anything
 
-### 1. Check Freshness
-Paste any AI-generated answer and click **Check Now**. The application checks whether the facts are still accurate.
+## 🚀 Problem Statement
 
-### 2. Claim-by-Claim Analysis
-The application splits an answer into individual claims and checks each one separately.
+AI models can generate confident answers that contain outdated information.
 
-Each claim receives one of three labels:
-- 🟢 Fresh
-- 🔴 Outdated
-- 🟡 Unclear
+Information such as software versions, prices, statistics, and public facts changes over time. Users may unknowingly rely on old information because AI-generated answers do not always reflect the latest updates.
 
-### 3. Summary Cards
-View a quick summary showing:
-- Total claims checked
-- Potentially outdated claims
-- Overall verdict (Fresh, Mixed, or Outdated)
+Stale Answer Detector addresses this problem by checking claims against current web evidence.
 
-### 4. Source Links
-Every analyzed claim includes source links so users can verify the supporting evidence.
+## 💡 Our Solution
 
-### 5. Corrected Answers
-For outdated or incorrect claims, the application provides updated information based on the available evidence.
+Our application provides a structured way to check the freshness of AI-generated information.
 
-### 6. Why Did the AI Go Wrong?
-Enter your original question and expected answer. The application analyzes the likely reason behind the incorrect response.
+Users can paste an answer or upload a document. The application identifies individual claims, checks them against live web sources, and provides clear verdicts with evidence and corrected information.
 
-### 7. Ask and Audit
-Ask a question directly in the application. It generates an AI answer and checks that answer for potentially outdated information.
+## ✨ Key Features
 
-### 8. Download My Report
-Download the analysis results for future reference or sharing.
+1. Claim-by-Claim Verification
 
-### 9. Check Another
-Clear previous results and analyze another AI-generated answer.
+Breaks AI-generated answers into individual factual claims.
+
+Checks each claim independently.
+
+Identifies potentially outdated information.
+
+2. Freshness Verdicts
+
+Every claim receives one of three labels:
+
+🟢 Fresh – Information supported by current evidence.
+
+🔴 Outdated – Information appears outdated.
+
+🟡 Unclear – Available evidence is insufficient to establish freshness.
+
+3. Live Source Links
+
+Provides evidence from live web searches.
+
+Displays source links under individual claims.
+
+Helps users independently verify information.
+
+4. Corrected Answers
+
+Provides updated replacement information for claims identified as outdated.
+
+5. Why Did It Go Wrong?
+
+Helps investigate why an AI-generated answer may have become incorrect by examining expected and actual information.
+
+6. Ask and Audit
+
+Ask a question, receive an AI-generated answer, and then audit it for outdated information.
+
+7. Document Checking
+
+Upload PDF or TXT documents.
+
+Identify time-sensitive claims.
+
+Check up to 12 claims per document.
+
+Supports files up to 200 MB.
+
+8. AI Model Comparison
+
+Compare AI models through an 8-question freshness benchmark using time-sensitive questions.
+
+9. PDF Report Generation
+
+Generate and download detailed PDF reports containing verification findings.
 
 ## 💡 Example
 
@@ -84,6 +121,32 @@ This application uses two external services:
 API keys are private credentials and should never be uploaded to GitHub.
 
 Users must provide their own API keys to run the application.
+
+## 📊 AI Model Benchmarking
+
+Stale Answer Detector includes an AI model comparison feature.
+
+Uses 8 time-sensitive questions.
+
+Compares model responses.
+
+Evaluates freshness accuracy.
+
+Categorizes findings as Fresh, Outdated, or Unclear.
+
+The benchmark helps demonstrate how different AI models handle information that changes over time.
+
+## 🎯 Use Cases
+
+Students: Verify facts in AI-generated study material.
+
+Developers: Check software versions and technical information.
+
+Researchers: Review time-sensitive information.
+
+Professionals: Verify information before using it in reports.
+
+Everyday users: Make more informed decisions when using AI.
 
 ## 💻 How to Run Locally
 
