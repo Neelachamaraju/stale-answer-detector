@@ -27,10 +27,10 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Deep dark canvas & completely hide sidebar */
+    /* Deep dark slate canvas & completely hide sidebar */
     .stApp {
-        background-color: #0B0F14 !important;
-        color: #F8FAFC !important;
+        background-color: #0E1117 !important;
+        color: #FAFAFA !important;
     }
     [data-testid="stSidebar"], [data-testid="collapsedControl"] {
         display: none !important;
@@ -45,32 +45,32 @@ st.markdown(
     [data-testid="stHorizontalBlock"] { gap: 0.85rem; }
     .stApp p, .stApp li, .stApp label { font-size: 14px; }
 
-    /* Glowing teal buttons */
+    /* Crisp glowing mint-teal buttons */
     .stButton button, .stDownloadButton button {
         width: 100%;
-        font-size: 0.89rem;
+        font-size: 0.90rem;
         padding: 0.56rem 0.75rem;
-        border-radius: 9px;
-        border: 1px solid rgba(94, 234, 212, 0.45) !important;
-        background-color: #111921 !important;
-        color: #E2E8F0 !important;
-        box-shadow: 0 0 8px rgba(20, 184, 166, 0.12);
+        border-radius: 8px;
+        border: 1px solid rgba(45, 212, 191, 0.55) !important;
+        background-color: #161B22 !important;
+        color: #FAFAFA !important;
+        box-shadow: 0 0 8px rgba(45, 212, 191, 0.15);
         transition: all 0.2s ease;
     }
     .stButton button:hover, .stDownloadButton button:hover {
-        border-color: #5EEAD4 !important;
+        border-color: #2DD4BF !important;
         color: #FFFFFF !important;
-        box-shadow: 0 0 12px rgba(94, 234, 212, 0.28);
+        box-shadow: 0 0 12px rgba(45, 212, 191, 0.32);
     }
     .stButton button[kind="primary"] {
-        background-color: #0D9488 !important;
-        color: #FFFFFF !important;
+        background-color: #2DD4BF !important;
+        color: #0E1117 !important;
         font-weight: 700 !important;
-        border: 1px solid #5EEAD4 !important;
-        box-shadow: 0 0 14px rgba(20, 184, 166, 0.35);
+        border: 1px solid #2DD4BF !important;
+        box-shadow: 0 0 14px rgba(45, 212, 191, 0.40);
     }
     textarea, input {
-        border-color: rgba(94, 234, 212, 0.35) !important;
+        border-color: rgba(45, 212, 191, 0.35) !important;
     }
     </style>
     """,
@@ -102,8 +102,8 @@ def hx(text):
     return html.escape(str(text)).replace("$", "&#36;")
 
 
-def heading(text, color="#5EEAD4"):
-    st.markdown('<div style="font-size:18px;font-weight:700;color:' + color
+def heading(text, color="#2DD4BF"):
+    st.markdown('<div style="font-size:17px;font-weight:700;color:' + color
                 + ';margin-top:8px;">' + text + '</div>', unsafe_allow_html=True)
 
 
@@ -129,12 +129,12 @@ def badge(name):
             f'white-space:nowrap;">{name}</span>')
 
 
-def tile(label, value, color="#5EEAD4"):
-    return ('<div style="border:1px solid rgba(94, 234, 212, 0.45);border-radius:10px;'
-            'padding:12px 14px;background:rgba(20, 184, 166, 0.05);'
-            'box-shadow:0 0 10px rgba(20, 184, 166, 0.10);">'
+def tile(label, value, color="#2DD4BF"):
+    return ('<div style="border:1px solid rgba(45, 212, 191, 0.5);border-radius:10px;'
+            'padding:12px 14px;background:rgba(45, 212, 191, 0.03);'
+            'box-shadow:0 0 10px rgba(45, 212, 191, 0.08);">'
             '<div style="font-size:15px;font-weight:700;color:' + color + ';">' + label + '</div>'
-            '<div style="font-size:15px;font-weight:600;margin-top:4px;color:#F8FAFC;">' + hx(value) + '</div></div>')
+            '<div style="font-size:15px;font-weight:600;margin-top:4px;color:#FAFAFA;">' + hx(value) + '</div></div>')
 
 
 def clean_pdf_text(text):
@@ -325,22 +325,22 @@ def show(key, allow_why=True, pdf_section="2. Checked Content"):
         verdict = "Mixed"
 
     c1, c2, c3 = st.columns(3)
-    c1.markdown(tile("Claims checked", len(results), "#5EEAD4"), unsafe_allow_html=True)
+    c1.markdown(tile("Claims checked", len(results), "#2DD4BF"), unsafe_allow_html=True)
     c2.markdown(tile("Possibly outdated", outdated + unclear, "#FDBA74"), unsafe_allow_html=True)
-    c3.markdown(tile("Verdict", verdict, "#5EEAD4"), unsafe_allow_html=True)
+    c3.markdown(tile("Verdict", verdict, "#2DD4BF"), unsafe_allow_html=True)
 
-    heading("Claim by claim", "#5EEAD4")
+    heading("Claim by claim", "#2DD4BF")
     for r, lv in zip(results, levels):
         src_html = ""
         if r.get("source_url"):
-            src_html = f'<div style="margin-top:8px;"><a href="{hx(r["source_url"])}" target="_blank" style="color:#5EEAD4;font-size:13px;text-decoration:none;">Source link &rarr;</a></div>'
+            src_html = f'<div style="margin-top:8px;"><a href="{hx(r["source_url"])}" target="_blank" style="color:#2DD4BF;font-size:13px;text-decoration:none;">Source link &rarr;</a></div>'
         st.markdown(
             f"""
-            <div style="border:1px solid rgba(94, 234, 212, 0.45);border-radius:10px;
-                        padding:14px 16px;margin-bottom:10px;background:rgba(20, 184, 166, 0.04);
-                        box-shadow:0 0 8px rgba(20, 184, 166, 0.08);">
+            <div style="border:1px solid rgba(45, 212, 191, 0.45);border-radius:10px;
+                        padding:14px 16px;margin-bottom:10px;background:rgba(45, 212, 191, 0.02);
+                        box-shadow:0 0 8px rgba(45, 212, 191, 0.06);">
               <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">
-                <div style="font-size:15px;font-weight:700;color:#5EEAD4;">{hx(r.get("claim", ""))}</div>
+                <div style="font-size:15px;font-weight:700;color:#2DD4BF;">{hx(r.get("claim", ""))}</div>
                 <div>{badge(lv)}</div>
               </div>
               <div style="font-size:14px;margin-top:6px;color:#E5E7EB;">{hx(r.get("reason", ""))}</div>
@@ -383,7 +383,7 @@ def show(key, allow_why=True, pdf_section="2. Checked Content"):
     else:
         why = None
 
-    heading("Export Detailed Report", "#5EEAD4")
+    heading("Export Detailed Report", "#2DD4BF")
     b1, b2 = st.columns(2)
     if not data.get("pdf_bytes"):
         if b1.button("Generate Detailed PDF Report", key=key + "_gen_pdf"):
@@ -427,20 +427,19 @@ elif mode == "doc":
 backup_pill = ""
 if show_backup:
     backup_pill = (
-        '<div style="background:rgba(20,184,166,0.16);color:#5EEAD4;padding:4px 12px;'
-        'border:1px solid rgba(94,234,212,0.5);border-radius:20px;font-size:12px;font-weight:600;">'
+        '<div style="background:rgba(45,212,191,0.12);color:#2DD4BF;padding:4px 12px;'
+        'border:1px solid rgba(45,212,191,0.45);border-radius:20px;font-size:12px;font-weight:600;">'
         'Answered by backup model</div>'
     )
 
 st.markdown(
     f"""
     <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
-      <div style="display:flex;align-items:center;gap:12px;">
-        <div style="width:40px;height:40px;border-radius:10px;background:#0D9488;color:#FFFFFF;
-                    border:1px solid #5EEAD4;
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:38px;height:38px;border-radius:9px;background:#2DD4BF;color:#0E1117;
                     display:flex;align-items:center;justify-content:center;
-                    font-size:21px;font-weight:800;">S</div>
-        <span style="font-size:30px;font-weight:700;color:#5EEAD4;">Stale-answer detector</span>
+                    font-size:20px;font-weight:700;">S</div>
+        <span style="font-size:30px;font-weight:700;color:#2DD4BF;">Stale-answer detector</span>
       </div>
       {backup_pill}
     </div>
@@ -583,12 +582,12 @@ elif mode == "compare":
                 tile(
                     short_name,
                     f"{s.get('fresh_pct', 0)}% Fresh  |  {s.get('outdated_pct', 0)}% Outdated",
-                    "#5EEAD4",
+                    "#2DD4BF",
                 ),
                 unsafe_allow_html=True,
             )
 
-        heading("Freshness Accuracy Comparison (%)", "#5EEAD4")
+        heading("Freshness Accuracy Comparison (%)", "#2DD4BF")
         chart_rows = []
         for m in models:
             s = summary.get(m, {})
@@ -600,7 +599,7 @@ elif mode == "compare":
                 f"""
                 <div style="margin-bottom:12px;">
                   <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;">
-                    <strong style="color:#F8FAFC;">{hx(short_name)}</strong>
+                    <strong style="color:#FAFAFA;">{hx(short_name)}</strong>
                     <span style="color:#94A3B8;">Fresh: {fresh_w}% &bull; Outdated: {out_w}% &bull; Unclear: {unc_w}%</span>
                   </div>
                   <div style="width:100%;height:16px;border-radius:8px;overflow:hidden;display:flex;background:#1E293B;">
@@ -612,14 +611,14 @@ elif mode == "compare":
                 """
             )
         st.markdown(
-            '<div style="border:1px solid rgba(94, 234, 212, 0.45);border-radius:10px;'
-            'padding:14px 16px;background:rgba(20, 184, 166, 0.04);">'
+            '<div style="border:1px solid rgba(45, 212, 191, 0.45);border-radius:10px;'
+            'padding:14px 16px;background:rgba(45, 212, 191, 0.03);">'
             + "".join(chart_rows)
             + "</div>",
             unsafe_allow_html=True,
         )
 
-        heading("Question-by-Question Results", "#5EEAD4")
+        heading("Question-by-Question Results", "#2DD4BF")
         for idx, r in enumerate(saved.get("rows", []), start=1):
             with st.container(border=True):
                 st.markdown(f"**Q{idx}: {hx(r.get('question', ''))}**")
@@ -629,7 +628,7 @@ elif mode == "compare":
                     st_name = m_info.get("status", "Unclear")
                     st.markdown(
                         f'<div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px;">'
-                        f'<span style="color:#5EEAD4;font-weight:600;">{hx(short_name)}</span>'
+                        f'<span style="color:#2DD4BF;font-weight:600;">{hx(short_name)}</span>'
                         f'{badge(st_name)}</div>',
                         unsafe_allow_html=True,
                     )
