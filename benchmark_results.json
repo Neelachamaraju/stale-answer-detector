@@ -1,0 +1,163 @@
+{
+  "run_date": "2026-11-19",
+  "models": [
+    "gemini/gemini-3.5-flash-lite",
+    "gemini/gemini-3.1-flash-lite"
+  ],
+  "summary": {
+    "gemini/gemini-3.5-flash-lite": {
+      "total": 8,
+      "fresh": 1,
+      "outdated": 4,
+      "unclear": 3,
+      "fresh_pct": 12,
+      "outdated_pct": 50
+    },
+    "gemini/gemini-3.1-flash-lite": {
+      "total": 8,
+      "fresh": 0,
+      "outdated": 6,
+      "unclear": 2,
+      "fresh_pct": 0,
+      "outdated_pct": 75
+    }
+  },
+  "rows": [
+    {
+      "question": "Who is the current CEO of Twitter (X)?",
+      "models": {
+        "gemini/gemini-3.5-flash-lite": {
+          "answer": "As of late 2023, the current CEO of Twitter (rebranded as X) is Linda Yaccarino, who assumed the role on June 5, 2023. She was appointed by billionaire Elon Musk, who bought the company for $44 billion on October 27, 2022, and previously served as CEO.",
+          "status": "Fresh",
+          "score": 90,
+          "reason": "The claim accurately reflects the historical details of Linda Yaccarino's appointment by Elon Musk in late 2023/mid-2023."
+        },
+        "gemini/gemini-3.1-flash-lite": {
+          "answer": "The current CEO of X (formerly Twitter) is Linda Yaccarino, who officially took over the role from Elon Musk on June 5, 2023. She oversees the company's business operations while Musk continues to serve as the owner and Chief Technology Officer.",
+          "status": "Outdated",
+          "score": 0,
+          "reason": "Linda Yaccarino resigned in July 2025, and as of late 2025 X has no officially appointed CEO."
+        }
+      }
+    },
+    {
+      "question": "What is the latest stable version of Python?",
+      "models": {
+        "gemini/gemini-3.5-flash-lite": {
+          "answer": "The latest stable version of Python is **Python 3.13.0**, which was officially released on **October 7, 2024**. This major update introduces several new features, including an experimental free-threaded build mode that removes the Global Interpreter Lock (GIL). Like all Python releases, it is available to download for free under an open-source license.",
+          "status": "Outdated",
+          "score": 0,
+          "reason": "Python 3.13.0 is no longer the latest stable version of Python as of 2026."
+        },
+        "gemini/gemini-3.1-flash-lite": {
+          "answer": "The latest stable version of Python is 3.13.0, which was officially released on October 7, 2024. This version introduces significant updates, including a free-threaded mode for improved multi-core performance and a new, more experimental interactive interpreter.",
+          "status": "Outdated",
+          "score": 0,
+          "reason": "The claim is outdated because Python 3.15 is the latest stable release as of late 2026."
+        }
+      }
+    },
+    {
+      "question": "How much does a standard ChatGPT Plus subscription cost per month?",
+      "models": {
+        "gemini/gemini-3.5-flash-lite": {
+          "answer": "A standard ChatGPT Plus subscription costs $20 per month. This pricing model was introduced by OpenAI when the subscription tier was launched on February 1, 2023.",
+          "status": "Unclear",
+          "score": 50,
+          "reason": "The provided web evidence does not contain any information about ChatGPT Plus pricing or launch dates."
+        },
+        "gemini/gemini-3.1-flash-lite": {
+          "answer": "A standard ChatGPT Plus subscription costs $20 per month. This subscription provides access to OpenAI's advanced models, including GPT-4 and GPT-4o, as of May 2024.",
+          "status": "Unclear",
+          "score": 50,
+          "reason": "The provided web evidence does not contain any information about ChatGPT Plus subscriptions, pricing, or models."
+        }
+      }
+    },
+    {
+      "question": "Who is the current captain of the Indian men's national cricket team?",
+      "models": {
+        "gemini/gemini-3.5-flash-lite": {
+          "answer": "As of May 2024, Rohit Sharma is the captain of the Indian men's national cricket team across all formats (Test, ODI, and T20I). He took over the full-time captaincy from Virat Kohli in early 2022.",
+          "status": "Unclear",
+          "score": 50,
+          "reason": "The provided evidence does not explicitly confirm whether Rohit Sharma was the captain across all formats specifically as of May 2024."
+        },
+        "gemini/gemini-3.1-flash-lite": {
+          "answer": "The current captain of the Indian men's national cricket team across all three formats\u2014Test, ODI, and T20I\u2014is Rohit Sharma. He officially took over full-time leadership duties from Virat Kohli in early 2022.",
+          "status": "Outdated",
+          "score": 0,
+          "reason": "The evidence shows that Rohit Sharma is no longer the captain across all three formats, as other players like Shreyas Iyer and Suryakumar Yadav have captained the T20I team in 2026."
+        }
+      }
+    },
+    {
+      "question": "What is the latest flagship iPhone model released by Apple?",
+      "models": {
+        "gemini/gemini-3.5-flash-lite": {
+          "answer": "The latest flagship iPhone models are the iPhone 16 Pro and iPhone 16 Pro Max, which were released by Apple on September 20, 2024. The base iPhone 16 Pro starts at a price of $999 with 128GB of storage, while the larger iPhone 16 Pro Max starts at $1,199 with 256GB of storage.",
+          "status": "Unclear",
+          "score": 50,
+          "reason": ""
+        },
+        "gemini/gemini-3.1-flash-lite": {
+          "answer": "The latest flagship models released by Apple are the iPhone 16 series, which launched on September 20, 2024. The lineup includes the base iPhone 16 starting at $799 and the premium iPhone 16 Pro, which begins at $999.",
+          "status": "Outdated",
+          "score": 0,
+          "reason": "The claim refers to the iPhone 16 series, but newer models like the iPhone 17 and iPhone 18 Pro have since been released."
+        }
+      }
+    },
+    {
+      "question": "Who is the current Prime Minister of the United Kingdom?",
+      "models": {
+        "gemini/gemini-3.5-flash-lite": {
+          "answer": "The current Prime Minister of the United Kingdom is Keir Starmer. He assumed office on July 5, 2024, following the 2024 general election where his Labour Party won a landslide victory.",
+          "status": "Outdated",
+          "score": 0,
+          "reason": "The evidence shows that Andy Burnham became the Prime Minister of the United Kingdom on July 20, 2026, succeeding Keir Starmer."
+        },
+        "gemini/gemini-3.1-flash-lite": {
+          "answer": "The current Prime Minister of the United Kingdom is Keir Starmer, who assumed office on July 5, 2024. He represents the Labour Party and succeeded Rishi Sunak following his party's victory in the general election held on July 4, 2024.",
+          "status": "Outdated",
+          "score": 0,
+          "reason": "The evidence shows that Andy Burnham is the current Prime Minister as of July 20, 2026, succeeding Keir Starmer."
+        }
+      }
+    },
+    {
+      "question": "What is the latest major version of React?",
+      "models": {
+        "gemini/gemini-3.5-flash-lite": {
+          "answer": "The latest major version of React is **React 19**, which was released as a stable version on **December 5, 2024**. This major release introduces key features like React Server Components, Actions, and asset loading without requiring a paid subscription, as React remains completely free and open-source.",
+          "status": "Outdated",
+          "score": 30,
+          "reason": "React 19.3 is available as of September 2026, making React 19 no longer the latest major version/patch."
+        },
+        "gemini/gemini-3.1-flash-lite": {
+          "answer": "The latest major version of React is version 19, which was officially released on December 5, 2024. This version introduces several performance enhancements and features, such as the React Compiler, Actions, and improved support for Web Components, all while remaining open-source and free to use.",
+          "status": "Unclear",
+          "score": 50,
+          "reason": "The evidence shows that React 19 was released on December 5, 2024, but subsequent updates (like React 19.3 in September 2026) have since been released, making the claim about it being just version 19 without accounting for the latest minor/patch versions incomplete."
+        }
+      }
+    },
+    {
+      "question": "Who won the most recent ICC Men's T20 World Cup?",
+      "models": {
+        "gemini/gemini-3.5-flash-lite": {
+          "answer": "India won the most recent ICC Men's T20 World Cup, which was the ninth edition of the tournament. They defeated South Africa by 7 runs in the final played on June 29, 2024, at the Kensington Oval in Bridgetown, Barbados.",
+          "status": "Outdated",
+          "score": 0,
+          "reason": "The most recent ICC Men's T20 World Cup is the 2026 edition, which was won by India against New Zealand, making the 2024 edition no longer the most recent one."
+        },
+        "gemini/gemini-3.1-flash-lite": {
+          "answer": "India won the most recent ICC Men's T20 World Cup, which took place in June 2024. They secured the title by defeating South Africa by 7 runs in the final match held on June 29, 2024, at the Kensington Oval in Barbados.",
+          "status": "Outdated",
+          "score": 0,
+          "reason": "The 2024 T20 World Cup is no longer the most recent edition, as the 2026 ICC Men's T20 World Cup has taken place."
+        }
+      }
+    }
+  ]
+}
